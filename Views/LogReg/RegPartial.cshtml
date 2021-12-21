@@ -1,0 +1,63 @@
+@model User;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Login & Registration</title>
+    </head>
+
+    <body>
+        <!--<h1 style="margin-left: 100px; font-size: 50px;">Registration</h1>-->
+
+        <form asp-action="Register">
+            <div class="form-group row mb-2">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <label asp-for="FirstName" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="FirstName" class="form-control" style="margin-left: -50px;">
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <span asp-validation-for="LastName" class="text-danger"></span><br>
+                <label asp-for="LastName" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="LastName" class="form-control" style="margin-left: -50px;">
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <span asp-validation-for="Email" class="text-danger"></span><br>
+                <label asp-for="Email" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="Email" class="form-control" style="margin-left: -50px;">
+                </div>
+            </div>
+
+            <div class="form-group row mb-2">
+                <span asp-validation-for="Password" class="text-danger"></span><br>
+                <label asp-for="Password" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="Password" class="form-control" style="margin-left: -50px;">
+                </div>
+            </div>
+            
+            <div class="form-group row mb-2">
+                <span asp-validation-for="ConfirmPW" class="text-danger"></span><br>
+                <label asp-for="ConfirmPW" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="ConfirmPW" class="form-control" style="margin-left: -50px;">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <input type="submit" value="Register" class="col-4 offset-4 mt-3 btn btn-primary">
+            </div>
+        </form>
+
+    </body>
+</html>

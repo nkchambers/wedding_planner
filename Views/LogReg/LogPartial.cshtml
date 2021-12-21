@@ -1,0 +1,39 @@
+@model LoginUser;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Login & Registration</title>
+    </head>
+
+    <body>
+        <!----<h1 style="margin-left: 100px; font-size: 50px;">Account Login</h1>--->
+
+        <form asp-action="Login">
+            <div class="form-group row mb-2">
+                <span asp-validation-for="LogEmail" class="text-danger"></span><br>
+                <label asp-for="LogEmail" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="LogEmail" class="form-control" style="margin-left: -60px;">
+                </div>
+            </div>
+                
+            <div class="form-group row mb-3">
+                <span asp-validation-for="LogPassword" class="text-danger"></span><br>
+                <label asp-for="LogPassword" class="col-4"></label>
+                <div class="col-8">
+                    <input asp-for="LogPassword" class="form-control" style="margin-left: -60px;">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <input type="submit" value="Login" class="col-4 offset-3 btn btn-primary">
+            </div>
+        </form>
+
+    </body>
+</html>
