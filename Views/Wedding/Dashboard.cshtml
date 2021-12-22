@@ -10,21 +10,21 @@
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         
-        <title>Login & Registration</title>
+        <title>Wedding Planner</title>
     </head>
 
     <body>
 
         <div class="container">
 
-            <div class="d-flex justify-content-between">
-                <h1>Welcome to the Wedding Planner, @Model.UserFirstName</h1>
-                <a href="/logout">Log Out</a>
+            <div class="d-flex justify-content-between mt-5 mb-5">
+                <h1>Welcome to the Wedding Planner,  @Model.UserFirstName</h1>
+                <a href="/logout" class="btn btn-dark" style="font-weight: bold; padding-top: 5px; padding-right: 25px; padding-left: 25px; font-size: 25px; color: skyblue;">Log Out</a>
             </div>
 
-            <table class="table">
+            <table class="table table-dark table-striped">
                 <thead>
-                    <tr class="row">
+                    <tr class="row" style="color: skyblue; font-size: 25px;">
                         <th class="col-3">Wedding</th>
                         <th class="col-3">Date</th>
                         <th class="col-2">Guests</th>
@@ -34,16 +34,38 @@
                 <tbody>
                     @foreach(Wedding wedding in Model.AllWeddings)
                     {
-                        <tr class="row">
-                            <td class="col-3"><a href="/weddings/@wedding.WeddingId">@wedding.WedderOne & @wedding.WedderTwo</a></td>
+                        <tr class="row" style="font-size: 20px;">
+                            <td class="col-3"><a href="/wedding/@wedding.WeddingId" style="color: white;">@wedding.WedderOne & @wedding.WedderTwo</a></td>
                             <td class="col-3">@wedding.Date</td>
                             <td class="col-2">@wedding.WeddingAttendees.Count</td>
-                            <td class="col-2"><a href="/">RSVP</a></td>
+                            @{
+                                bool RSVPtoRender = false;
+
+                                foreach(WeddingAttendees RSVP in wedding.WeddingAttendees)
+                                {
+                                    if(RSVP.UserId == Model.LoggedUserId)
+                                    {
+                                        RSVPtoRender = true;
+                                    }
+                                }
+                                if(Model.LoggedUserId == wedding.UserId)
+                                {
+                                    <td class="col-2"><a href="/wedding/@wedding.WeddingId/delete">Delete</a></td>
+                                }
+                                else if(RSVPtoRender == true)
+                                {
+                                    <td class="col-2"><a href="/wedding/@wedding.WeddingId/Un-RSVP">Un-RSVP</a></td>
+                                }
+                                else
+                                {
+                                    <td class="col-2"> <a href="/wedding/@wedding.WeddingId/RSVP">RSVP</a></td>
+                                } 
+                            }      
                         </tr>
                     }
                 </tbody>
             </table>
-            <a href="/weddings/new" class="btn btn-secondary">Create a Wedding!</a>
+            <a href="/wedding/new" class="btn btn-dark mt-5" style="font-size: 20px; color: skyblue; font-weight: bold;">Create a Wedding!</a>
 
         </div>
 

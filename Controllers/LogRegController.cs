@@ -50,7 +50,7 @@ namespace wedding_planner.Controllers
                 _context.SaveChanges();
                 HttpContext.Session.SetInt32("UserId", fromForm.UserId);
 
-                return RedirectToAction("Dashboard");
+                return RedirectToAction("Dashboard", "Wedding");
             }
             else
             {
@@ -98,25 +98,6 @@ namespace wedding_planner.Controllers
                 return Index();
             }
         }
-
-
-        /*//USER DASHBOARD PAGE
-        [HttpGet("dashboard")]
-        public IActionResult Dashboard()
-        {
-            int? UserId = HttpContext.Session.GetInt32("UserId");
-            if (UserId == null)
-            {
-                return RedirectToAction("Index", "LogReg");
-            }
-
-            DashboardView ViewModel = new DashboardView
-            {
-                UserFirstName = _context.Users.FirstOrDefault(u => u.UserId == (int)UserId).FirstName
-            };
-
-            return View(ViewModel);
-        }*/
 
 
         //LOGOUT USER METHOD

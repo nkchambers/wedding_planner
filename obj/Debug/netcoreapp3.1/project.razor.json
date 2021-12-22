@@ -14402,6 +14402,11 @@
   "RootNamespace": "wedding_planner",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\Views\\Wedding\\NewWedding.cshtml",
+      "TargetPath": "Views\\Wedding\\NewWedding.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\Views\\LogReg\\LogPartial.cshtml",
       "TargetPath": "Views\\LogReg\\LogPartial.cshtml",
       "FileKind": "mvc"
@@ -14414,6 +14419,11 @@
     {
       "FilePath": "c:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\Views\\Wedding\\Dashboard.cshtml",
       "TargetPath": "Views\\Wedding\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\Views\\Wedding\\WeddingInfo.cshtml",
+      "TargetPath": "Views\\Wedding\\WeddingInfo.cshtml",
       "FileKind": "mvc"
     },
     {

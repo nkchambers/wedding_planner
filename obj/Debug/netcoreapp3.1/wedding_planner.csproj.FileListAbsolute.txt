@@ -56,3 +56,5 @@ C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\wedding_planne
 C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\wedding_planner.pdb
 C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\wedding_planner.genruntimeconfig.cache
 C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\Razor\Views\Wedding\Dashboard.cshtml.g.cs
+C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\Razor\Views\Wedding\NewWedding.cshtml.g.cs
+C:\Users\nick8\Desktop\C#\wedding_planner\obj\Debug\netcoreapp3.1\Razor\Views\Wedding\WeddingInfo.cshtml.g.cs
