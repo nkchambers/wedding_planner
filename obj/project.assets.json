@@ -907,11 +907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\wedding_planner.csproj",
+      "projectUniqueName": "C:\\Users\\nick8\\Desktop\\Coding_Dojo\\C#\\wedding_planner\\wedding_planner.csproj",
       "projectName": "wedding_planner",
-      "projectPath": "C:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\wedding_planner.csproj",
+      "projectPath": "C:\\Users\\nick8\\Desktop\\Coding_Dojo\\C#\\wedding_planner\\wedding_planner.csproj",
       "packagesPath": "C:\\Users\\nick8\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nick8\\Desktop\\C#\\wedding_planner\\obj\\",
+      "outputPath": "C:\\Users\\nick8\\Desktop\\Coding_Dojo\\C#\\wedding_planner\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nick8\\AppData\\Roaming\\NuGet\\NuGet.Config"
